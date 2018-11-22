@@ -31,6 +31,9 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
+<!-- Bootstrap theme file -->
+<link href="${css}/bootstrap-theme.css" rel="stylesheet">
+
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
@@ -40,39 +43,44 @@
 </head>
 
 <body>
+	<div class="wrapper">
 
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
-	<!-- Page Content -->
+		<!-- Page Content -->
+		<div class="content">
 
-	<!-- Loading home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
+			<!-- Loading home content -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-	<!-- Loading ONLY WHEN USER CLICKS ABOUT-->
-	<c:if test="${userClickAbout == true}">
-		<%@include file="about.jsp"%>
-	</c:if>
+			<!-- Loading ONLY WHEN USER CLICKS ABOUT-->
+			<c:if test="${userClickAbout == true}">
+				<%@include file="about.jsp"%>
+			</c:if>
 
-	<!-- Loading ONLY WHEN USER CLICKS ABOUT-->
-	<c:if test="${userClickContact == true}">
-		<%@include file="contact.jsp"%>
-	</c:if>
+			<!-- Loading ONLY WHEN USER CLICKS ABOUT-->
+			<c:if test="${userClickContact == true}">
+				<%@include file="contact.jsp"%>
+			</c:if>
 
-	<!-- /.container -->
+		</div>
 
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
-	
-	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery.min.js"></script>
-	<script src="${js}/bootstrap.bundle.min.js"></script>
-	
-	<!-- self coded JavaScript -->
-	<script src="${js}/myapp.js"></script>
-	
+		<!-- /.container -->
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+
+		<!-- self coded JavaScript -->
+		<script src="${js}/myapp.js"></script>
+	</div>
+
 </body>
 
 </html>
